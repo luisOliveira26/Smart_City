@@ -1,0 +1,3 @@
+rodrigo:$2y$10$eKElf/OsizYfL6g5IUP3puZRbDnmjK/jCQJZ6OzOZaQRsBh0mfMty:admin
+diogo:$2y$10$rU.Jm2scSLdqVq94z6cz0ONs5CCoE./x05Nn685/TNIC7E5ky80wm:seguranca
+luis:$2y$10$CohKLjkUTxZL5qAx1KbmHenC313PFS7yLh.1izdHxQOFRQEkv4hTu:user

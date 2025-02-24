@@ -1,0 +1,1 @@
+humidade:temperatura:led:semaforo:avoid:alarme:luminosidade

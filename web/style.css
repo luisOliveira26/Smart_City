@@ -1,0 +1,688 @@
+    /* Estilos para a div que contém o gráfico */
+    .grafico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      /* Largura fixa da div */
+      height: 300px;
+      margin: 0 auto;
+      /* Centraliza horizontalmente a div na página */
+      color: #000;
+      /* Cor do texto em preto */
+    }
+
+    /* Estilos para o elemento canvas que renderiza o gráfico */
+    canvas {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+.button-85 {
+  /* Estilos base do botão */
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
+}
+
+.button-85:before {
+  /* Efeito de gradiente animado do botão */
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  /* Animação do efeito de gradiente do botão */
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  /* Fundo escuro do botão */
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #040f43;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+
+.textotemp {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 600px;
+
+  /* Centralizar horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Adicione esta linha */
+}
+
+
+
+
+
+/* Define um contêiner para o vídeo */
+.video-container {
+  position: relative;
+}
+
+/* Estilo para o elemento de vídeo dentro do contêiner */
+.video-container video {
+  width: 100%; /* O vídeo ocupará 100% da largura do contêiner */
+  height: auto; /* A altura será ajustada automaticamente de acordo com a proporção do vídeo */
+}
+
+
+
+
+
+
+
+
+.botoesVER1 {
+  /* Estilos do container dos botões */
+  position: absolute;
+  top: 15%; /* Ajuste a posição vertical conforme necessário */
+  right: 0%; /* Ajuste a posição horizontal conforme necessário */
+  width: 30%; /* Ajuste a largura conforme necessário */
+  height: 300px; /* Ajuste a altura conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.botoesVER1 button {
+  /* Estilos dos botões */
+  margin-bottom: 20px; /* Ajuste a distância vertical entre os botões conforme necessário */
+}
+
+.botoesVER2 {
+  /* Estilos do container dos botões */
+  position: absolute;
+  top: 70%; /* Ajuste a posição vertical conforme necessário */
+  right: 0%; /* Ajuste a posição horizontal conforme necessário */
+  width: 30%; /* Ajuste a largura conforme necessário */
+  height: 300px; /* Ajuste a altura conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.botoesVER2 button {
+  /* Estilos dos botões */
+  margin-bottom: 20px; /* Ajuste a distância vertical entre os botões conforme necessário */
+}
+
+
+
+.button-85 {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  left: 0px; /* Ajuste o valor para mover o botão para a esquerda */
+
+
+}
+
+#verificaLEDS {
+  /* Estilos do botão de verificação dos LEDs */
+  bottom: -60px; /* Ajuste o valor conforme necessário */
+}
+
+#verificaSensor {
+  /* Estilos do botão de verificação do Sensor */
+  bottom: -115px; /* Ajuste o valor conforme necessário */
+}
+
+#verificaSemaforo {
+  /* Estilos do botão de verificação dos LEDs */
+  bottom: -170px; /* Ajuste o valor conforme necessário */
+}
+
+#verificaAlarme {
+  /* Estilos do botão de verificação do Alarme */
+  bottom: -280px; /* Ajuste o valor conforme necessário */
+}
+
+#playButton {
+  /* Estilos do botão de reprodução do vídeo */
+  bottom: -225px; /* Ajuste o valor conforme necessário */
+}
+
+
+
+#ligaLEDS {
+  /* Estilos do botão de verificação dos LEDs */
+  bottom: 108px; /* Ajuste o valor conforme necessário */
+}
+
+#ativaBuzzer {
+  /* Estilos do botão de verificação do buzzer */
+  bottom: 163px; /* Ajuste o valor conforme necessário */
+}
+
+#ligaSemaforo {
+  /* Estilos do botão para controlar semaforo */
+  bottom: 53px; /* Ajuste o valor conforme necessário */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imagemLED {
+  /* Estilos das imagens dos LEDs */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+  z-index: 3;
+}
+
+.sensores{
+  /* Estilos das imagens dosSensores */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+  z-index: 3;
+}
+
+#sensor_us {
+  /* Estilos do texto do sensor */
+  transform: translate(-210%, 400%);
+}
+
+#sensor_us:hover {
+  /* Estilos da imagem do sensor ao passar o mouse */
+  transform: translate(-210%, 400%) scale(1.5);
+}
+
+#sensor_us:hover ~ #textSensor_us {
+  /* Estilos do texto do sensor ao passar o mouse */
+  opacity: 1 !important;
+}
+
+#semaforo {
+  /* Estilos do texto do semaforo */
+  transform: translate(-240%, -280%);
+}
+
+#semaforo:hover {
+  /* Estilos da imagem do semaforo ao passar o mouse */
+  transform: translate(-240%, -280%) scale(1.5);
+}
+
+#semaforo:hover ~ #textsemaforo {
+  /* Estilos do texto do semaforo ao passar o mouse */
+  opacity: 1 !important;
+}
+
+#textSensor_us {
+  /* Estilos do texto do sensor */
+  transform: translate(-300%, 550%);
+}
+
+#textsemaforo {
+  /* Estilos do texto do semaforo */
+  transform: translate(-490%, -600%);
+}
+
+
+.fundooo {
+  /* Estilos do contêiner principal */
+  position: relative;
+}
+
+#ledimage1:hover ~ #textLED1 {
+  /* Estilos do texto do LED 1 ao passar o mouse */
+  opacity: 1 !important;
+}
+
+#ledimage2:hover ~ #textLED2 {
+  /* Estilos do texto do LED 2 ao passar o mouse */
+  opacity: 1 !important;
+}
+
+#ledimage3:hover ~ #textLED3 {
+  /* Estilos do texto do LED 3 ao passar o mouse */
+  opacity: 1 !important;
+}
+
+
+
+
+#textLED1 {
+  /* Estilos do texto do LED 1 */
+  transform: translate(225%, 170%);
+}
+
+#textLED2 {
+  /* Estilos do texto do LED 2 */
+  transform: translate(690%, -590%);
+}
+
+#textLED3 {
+  /* Estilos do texto do LED 3 */
+  transform: translate(-510%, -590%);
+}
+
+
+
+
+
+
+#ledimage1 {
+  /* Estilos da imagem do LED 1 */
+  transform: translate(110%, 170%);
+}
+
+#buzzerimage1 {
+  /* Estilos da imagem do buzzer */
+  transform: translate(-370%, -150%) scale(0.8);
+}
+
+#ledimage2 {
+  /* Estilos da imagem do LED 2 */
+  transform: translate(430%, -290%);
+}
+#ledimage3 {
+  /* Estilos da imagem do LED 3 */
+  transform: translate(-400%, -290%);
+}
+
+
+#ledimage1:hover {
+  /* Estilos da imagem do LED 1 ao passar o mouse */
+  transform: translate(110%, 170%) scale(1.5);
+}
+
+#buzzerimage1:hover {
+  /* Estilos da imagem do buzzer ao passar o mouse */
+  transform: translate(-370%, -150%) scale(1.2);
+}
+
+#buzzerimage1:hover ~ #textBuzzer1 {
+  /* Estilos do texto do buzzer  ao passar o mouse */
+  opacity: 1 !important;
+}
+
+#textBuzzer1 {
+  /* Estilos do texto */
+  transform: translate(-850%, -330%);
+}
+
+#ledimage2:hover {
+  /* Estilos da imagem ao passar o mouse */
+  transform: translate(430%, -290%) scale(1.5);
+}
+
+#ledimage3:hover {
+  /* Estilos da imagem ao passar o mouse */
+  transform: translate(-400%, -290%) scale(1.5);
+}
+
+.textled {
+  /* Estilos do texto do LED */
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 3px 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+.encaixe {
+  /* Estilos do contêiner de encaixe */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vdcity {
+  /* Estilos da imagem */
+  max-width: 100%;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.overlay {
+  /* Estilos do overlay para simular dia e noite */
+  position: absolute;
+  background-image: url("imagens/fundoescuro.png");
+  margin: 150px;
+  width: 667px;
+  height: 496px;
+  border-radius: 9%;
+  /*animation: loop-opacity 10s infinite;*/
+}
+
+@keyframes loop-opacity {
+  /* Animação para alternar entre dia e noite */
+  0% {
+    opacity: 0.0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+
+/* Estilos para o botão de reprodução */
+#playButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#playButton:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para a imagem da cidade */
+#vdcity {
+  position: relative;
+  display: flex;
+  margin: 80px;
+  width: 667px;
+  height: 500px;
+  border-radius: 10%;
+}
+
+/* Estilos para o fundo dinâmico do dashboard */
+#dashboard {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s linear infinite;
+  height: 100%;
+}
+
+/* Animação para o gradiente do fundo dinâmico */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
+.sensor
+{
+    background-color: #93baff ;
+}
+
+.atuador
+{
+    background-color: #ffbf6c ;
+}
+
+
+    form{
+        width: 350px;
+        padding: 15px;
+    }
+
+#imagem_ESTG{
+    margin: 20px;
+}
+#index{
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown5 {
+  position: absolute;
+  top: 0; /* Posiciona no topo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o deslocamento horizontal */
+  display: inline-block;
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown5-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown5-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* Show the dropdown menu on hover */
+.dropdown5:hover .dropdown5-content {display: block;}
+
+
+
+
+
+
+
+
+@media (max-width: 1290px){
+
+    #imagem_ESTG{
+        width: 300px; 
+    }
+    
+}
+
+@media (max-width: 1145px){
+
+    #imagem_ESTG{
+        width: 250px; 
+    }
+    
+}
+
+
+@media (max-width: 970px){
+
+    #imagem_ESTG{
+        width: 200px; 
+    }
+    
+}
+
+@media (max-width: 820px){
+
+    #imagem_ESTG{
+        width: 180px; 
+    }
+    
+}
+
+@media (max-width: 770px){
+
+    #imagem_ESTG{
+        width: 150px; 
+    }
+    #imgcity{
+        width: 500px;
+        height: 375px;
+    }
+    .overlay{
+        width: 500px;
+        height: 375px;
+    }
+    
+}
+
+@media (max-width: 660px){
+
+    #imagem_ESTG{
+        width: 120px; 
+    }
+    
+}
+
+@media (max-width: 575px){
+
+    #imagem_ESTG{
+        width: 300px; 
+    }
+    
+}
+
+@media (max-width: 380px){
+
+    #imagem_ESTG{
+        width: 250px; 
+    }
+    
+}
+
+
+@media (max-width: 320px){
+
+    #imagem_ESTG{
+        width: 230px; 
+    }
+    
+}
+
+@media (max-width: 305px){
+
+    #imagem_ESTG{
+        width: 210px; 
+    }
+    
+}
+
+@media (max-width: 285px){
+
+    #imagem_ESTG{
+        width: 190px; 
+    }
+    
+}
+
+@media (max-width: 260px){
+
+    #imagem_ESTG{
+        width: 170px; 
+    }
+    .overlay{
+        width: 444px;
+        height: 333px;
+    }
+    #imgcity{
+        width: 444px;
+        height: 333px;
+    }
+    
+}
